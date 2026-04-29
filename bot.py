@@ -4,6 +4,18 @@ from collections import Counter
 from datetime import datetime
 import json
 import os
+
+print("=== DEBUG Variables ===")
+token = os.environ.get("TELEGRAM_TOKEN")
+print(f"TELEGRAM_TOKEN present: {bool(token)}")
+if token:
+    print(f"TELEGRAM_TOKEN length: {len(token)}")
+else:
+    print("TELEGRAM_TOKEN is empty or missing")
+key = os.environ.get("OPENWEATHER_API_KEY")
+print(f"OPENWEATHER_API_KEY present: {bool(key)}")
+print("=== END DEBUG ===")
+
 import re
 import threading
 import time
